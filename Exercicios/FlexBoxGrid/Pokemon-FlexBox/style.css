@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(110px, auto);
+  gap: 10px 15px; */
+}
+
+.header {
+  width: 100%;
+  min-height: 40px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 8px 15px;
+}
+
+.logoNavBar {
+  width: 100px;
+}
+
+.meunus {
+  display: flex;
+  gap: 15px;
+}
+
+.navButton {
+  font-size: 16px;
+  padding: 6px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.navButton:hover {
+  border-bottom: 2px solid red;
+}
+
+.sectionTitle {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.sectionDescription {
+  font-size: 20px;
+  text-align: center;
+  color: #383838;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainContent sidebarContent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: mainContent;
+}
+
+.pokemon {
+  width: 430px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.mainCardimg {
+  width: 100%;
+  height: 210px;
+  border-radius: 10px;
+}
+.pokemon:hover {
+  border-color: black;
+}
+
+.mainCategoryCardTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+
+.mainCategoryCardDescription {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+
+.sidebarContent {
+  background-color: #383838;
+  color: white;
+  padding: 16px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidebarContent;
+}
+
+.sidebarCard {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.sidebarCardImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sidebarCard:hover {
+  border-color: gainsboro;
+}
+
+.sidebarCardTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer {
+  width: 100%;
+  min-height: 40px;
+  background-color: #292929;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 15px;
+  transition: 0.4s;
+}
+
+.logoFootBar {
+  width: 150px;
+}
+
+.footerAnchor {
+  color: white;
+  text-decoration: none;
+}
+
+.footerAnchor:hover {
+  border-bottom: 2px solid red;
+}
+
+@media (max-width: 2560px) {
+  .gridContainer {
+    grid-template-areas: "mainContent sidebarContent";
+  }
+  .mainContent {
+    align-content: space-around;
+  }
+  .pokemon {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .pokemon {
+    width: 50%;
+    height: auto;
+  }
+  .footerAnchor {
+    font-size: 30px;
+  }
+  .logoFootBar {
+    width: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pokemon {
+    width: 30%;
+    height: auto;
+  }
+  .logoFootBar {
+    width: 20%;
+  }
+}
+
+@media (max-width: 780px) {
+  .gridContainer {
+    grid-template-areas:
+      "mainContent"
+      "sidebarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .pokemon {
+    width: 60%;
+    height: 60%;
+  }
+  .logoFootBar {
+    width: 25%;
+  }
+  .footerAnchor {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    justify-content: center;
+    font-size: 14px;
+  }
+  .footerAnchor {
+    width: auto;
+    justify-content: center;
+    font-size: 14px;
+  }
+  .footer {
+    width: 290px;
+  }
+}
